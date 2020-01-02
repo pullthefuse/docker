@@ -6,7 +6,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN echo 'export PS1="[docker-setup] $(PWD) > "' >> /root/.bashrc
 
 COPY ./setup.sh /usr/local/bin/setup.sh
-COPY /load.sh /usr/local/bin/load.sh
+COPY ./load.sh /usr/local/bin/load.sh
 
 RUN ["chmod", "+x", "/usr/local/bin/setup.sh"]
 RUN ["chmod", "+x", "/usr/local/bin/load.sh"]
