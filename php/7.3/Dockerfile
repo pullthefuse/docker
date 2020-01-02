@@ -10,7 +10,7 @@ RUN apk add --update \
          postgresql-dev \
          zip \
          bash \
-     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
      && docker-php-ext-install -j$(nproc) gd exif \
      && docker-php-ext-configure zip --with-libzip \
      && docker-php-ext-install opcache pdo pdo_mysql pdo_pgsql \
