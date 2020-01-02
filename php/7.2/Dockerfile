@@ -6,8 +6,8 @@ RUN apk add --update \
          libjpeg-turbo-dev \
          libpng-dev \
          icu-dev \
+         libzip-dev \
          postgresql-dev \
-         libpq \
          zip \
          bash \
      && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
