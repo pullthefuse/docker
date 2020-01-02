@@ -12,8 +12,6 @@ RUN apk add --update \
          bash \
      && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
      && docker-php-ext-install -j$(nproc) gd exif \
-     && docker-php-ext-configure zip --with-libzip \
-     && docker-php-ext-install opcache pdo pdo_mysql pdo_pgsql \
-     && pecl install mongodb
+     && docker-php-ext-install opcache pdo pdo_mysql pdo_pgsql
 
 RUN echo 'export PS1="[$(whoami)] $(pwd) > "' >> /root/.bashrc
